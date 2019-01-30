@@ -1,0 +1,40 @@
+.wrap-product {
+  display: inline-block;
+  position: relative;
+  vertical-align: middle;
+  width: 454px;
+}
+
+.wrap-product > .buttons {
+  position: absolute;
+  bottom: 0;
+  transform: translateY(calc(100% + 98px));
+  width: 100%;
+}
+
+.wrap-product > .buttons > .button-store {
+  float: right;
+}
+
+.wrap-product > .buttons > .button-store.-second {
+  float: left;
+}
+
+@media (max-width: 1310px) {
+  .wrap-product {
+    width: 100%;
+  }
+  .wrap-product > .buttons {
+    margin-left: auto;
+    margin-right: auto;
+    position: static;
+    text-align: center;
+    transform: none;
+    width: 100%;
+  }
+
+  .wrap-product > .buttons > .button-store,
+  .wrap-product > .buttons > .button-store.-second {
+    float: none;
+  }
+}

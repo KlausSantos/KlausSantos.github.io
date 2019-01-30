@@ -1,0 +1,156 @@
+.header-store {
+  color: #ffffff;
+  margin-bottom: 138px;
+  padding-left: 60px;
+  overflow: hidden;
+}
+
+.header-store > .title {
+  cursor: pointer;
+  float: left;
+  font-family: Arial, "Roboto", sans-serif;
+  font-size: 40px;
+  text-transform: uppercase;
+}
+.header-store > .navigation {
+  font-family: "Segoe UI", "Roboto", sans-serif;
+  float: right;
+  font-size: 21px;
+}
+
+.header-store .list {
+  display: inline;
+}
+
+.header-store .item {
+  display: inline-block;
+  margin-right: 60px;
+  padding-bottom: 8px;
+}
+
+.header-store .item.-menu {
+  display: none;
+}
+
+.header-store .item.-last {
+  margin-right: 0;
+}
+
+.header-store .action {
+  color: inherit;
+  position: relative;
+  text-decoration: none;
+}
+
+.header-store .action::after {
+  background-color: #fff;
+  bottom: 0;
+  content: "";
+  height: 1px;
+  left: 0;
+  position: absolute;
+  transform: scaleX(0);
+  transform-origin: center left;
+  transition: transform 200ms linear;
+  width: 100%;
+}
+
+.header-store .action:hover::after {
+  transform: scaleX(1);
+}
+
+@media (max-width: 1310px) {
+  .header-store {
+    padding-right: 60px;
+  }
+}
+
+@media (max-width: 1235px) {
+  .header-store {
+    margin-bottom: 70px;
+  }
+  .header-store > .title {
+    float: none;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  .header-store > .navigation {
+    float: none;
+    text-align: center;
+  }
+}
+
+@media (max-width: 965px) {
+  .header-store {
+    margin-bottom: 40px;
+    padding-right: 30px;
+    padding-left: 30px;
+  }
+}
+
+@media (max-width: 530px) {
+  .header-store .item {
+    margin-right: 30px;
+  }
+}
+
+@media (max-width: 465px) {
+  .header-store .item {
+    margin-right: 15px;
+  }
+}
+
+@media (max-width: 425px) {
+  .header-store {
+    padding-right: 16px;
+    padding-left: 16px;
+  }
+  .header-store .item {
+    margin-right: 8px;
+  }
+}
+
+@media (max-width: 383px) {
+  .header-store .item.-menu {
+    background: url(../img/menu.svg) no-repeat #fff center;
+    box-sizing: border-box;
+    cursor: pointer;
+    display: block;
+    height: 40px;
+    left: 0;
+    margin: 0;
+    position: absolute;
+    top: 0;
+    text-indent: -9999px;
+    transform: translateX(-100%);
+    transition: transform 100ms 400ms linear;
+    width: 40px;
+  }
+  .header-store .list {
+    background-color: #fff;
+    color: #000;
+    right: 0;
+    padding: 20px 0 10px;
+    position: absolute;
+    transform: translateX(100%);
+    transition: transform 300ms linear;
+    top: 0;
+    width: 100vw;
+  }
+
+  .header-store .list.-active {
+    transform: translateX(0);
+  }
+
+  .header-store .list.-active .item.-menu {
+    background-image: url(../img/close.svg);
+    background-size: 70%;
+    transform: translateX(0);
+    transition: none;
+  }
+
+  .header-store .item {
+    display: block;
+  }
+}
