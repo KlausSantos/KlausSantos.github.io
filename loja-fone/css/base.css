@@ -10,6 +10,10 @@ body {
 
 @media (max-width: 383px) {
   body {
+    position: relative;
     overflow-x: hidden;
+  }
+  html {
+    overflow: hidden;
   }
 }
